@@ -31,7 +31,7 @@ main {
 form {display: flex; flex-direction: column; align-items: center;}
 input {font-size: 1em; padding: 0.5em 1.5em; margin: 0.8em 0 0 0; width: 20em; border: none; background-color: wheat; transition: all 250ms ease; border-radius: 0.3em;}
 input::placeholder {color: black;} input:focus {background-color: white;}
-input[type="submit"] {font-weight: bold;} input[type="submit"]:hover {cursor: pointer; background-color: white;}
+input[type="submit"] {font-weight: bold; background-color: rgb(255, 255, 255);} input[type="submit"]:hover {cursor: pointer; background-color: antiquewhite;}
 
 
 @media (max-width: 875px) {
@@ -43,6 +43,7 @@ input[type="submit"] {font-weight: bold;} input[type="submit"]:hover {cursor: po
     .abtext--title {font-size: 3em;}
 }
 @media (max-width: 570px) {
+    :root {font-size: 11px;}
     main {flex-direction: column;}
     .menu {position: static; color: wheat;  cursor: pointer;}
     #hide {display: none;}
@@ -51,4 +52,11 @@ input[type="submit"] {font-weight: bold;} input[type="submit"]:hover {cursor: po
         display: flex; flex-direction: column; align-items: center; transition: all 250ms ease;
     }
     .link--nav {margin-top: 2em;}
+    .abtext--description {margin: 1.5em 0 0 0 ;}
+    form {margin: 4em 0 0 0;}
+}
+@media (max-width: 320px) {
+    :root {font-size: 10px;}
+    .link--brand span {font-size: 1.5em;}
+    .join a {font-size: 1em;}
 }
