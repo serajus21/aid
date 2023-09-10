@@ -1,0 +1,54 @@
+:root {font-size: 16px; box-sizing: border-box;}
+*, *::after, *::before {box-sizing: inherit; margin: 0; padding: 0;}
+body {background: linear-gradient(to right, rgba(0, 0, 0, 0.900), rgba(0, 0, 0, 0.700)), url('background.jpg') no-repeat fixed center; background-size: cover;}
+
+/* header */
+header {
+    min-height: 5em; display: flex; justify-content: space-between; align-items: center;
+    padding: 0.5em 1em;
+}
+.link {text-decoration: none; font-size: 1em; padding: 0.5em 1em; margin: 0 0.5em 0 0;}
+.link--brand {display: flex; align-items: center; padding: 0; margin: 0;}
+.link--brand img {height: 2em;}
+.link--brand span {font-size: 2em; padding: 0 0 0 0.3em; color: wheat;}
+.link--nav {color: white;} .link--nav:hover {color: wheat;}
+.link--startTrial {border: 0.1em solid;}
+.join .link {color: wheat;}
+.join .link:hover {color: white;}
+.menu {font-size: 1.2em; width: 1em; background-color: transparent; border: none; color: transparent; position: fixed;}
+#view {rotate: 90deg;}
+
+/* main */
+main {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding: 5em 2em;
+}
+.about, form {width: 100%;}
+.abtext {display: block; color: white;}
+.abtext--subtitle {font-weight: bold; margin: 0 0 1em 0;}
+.abtext--title {font-size: 4em; color: wheat;}
+.abtext--description {color: gray; font-size: 1em; margin: 3em 0 0 0;}
+form {display: flex; flex-direction: column; align-items: center;}
+input {font-size: 1em; padding: 0.5em 1.5em; margin: 0.8em 0 0 0; width: 20em; border: none; background-color: wheat; transition: all 250ms ease; border-radius: 0.3em;}
+input::placeholder {color: black;} input:focus {background-color: white;}
+input[type="submit"] {font-weight: bold;} input[type="submit"]:hover {cursor: pointer; background-color: white;}
+
+
+@media (max-width: 875px) {
+    :root {font-size: 14px;}
+    .abtext--title {font-size: 3.5em;}
+}
+@media (max-width: 765px) {
+    :root {font-size: 12px;}
+    .abtext--title {font-size: 3em;}
+}
+@media (max-width: 570px) {
+    main {flex-direction: column;}
+    .menu {position: static; color: wheat;  cursor: pointer;}
+    #hide {display: none;}
+    .nav {
+        position: fixed; top: 5em; right: -100%; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.853);
+        display: flex; flex-direction: column; align-items: center; transition: all 250ms ease;
+    }
+    .link--nav {margin-top: 2em;}
+}
